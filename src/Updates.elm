@@ -44,6 +44,10 @@ update msg model =
                 { model | entries = List.map updateEntry model.entries }
                     ! [ Task.attempt (\_ -> NoOp) focus ]
 
+        Delete id ->
+            { model | entries = List.filter (\t -> t.id /= id) model.entries }
+                ! []
+                
         UpdateEntry id task ->
             let
                 updateEntry t =
