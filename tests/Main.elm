@@ -3,7 +3,7 @@ port module Main exposing (..)
 import Sample.Generated
 import Sample.String
 import Todo.Update.Delete
---import Todo.Update.Check
+import Todo.Update.Check
 import Test exposing(Test, describe)
 import Test.Runner.Node exposing (run, TestProgram)
 import Json.Encode exposing (Value)
@@ -15,7 +15,7 @@ tests =
         [ Sample.Generated.tests
         , Sample.String.tests
         , Todo.Update.Delete.tests
-        --, Todo.Update.Check.tests
+        , Todo.Update.Check.tests
         ]
 
 

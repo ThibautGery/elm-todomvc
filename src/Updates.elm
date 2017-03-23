@@ -47,7 +47,18 @@ update msg model =
         Delete id ->
             { model | entries = List.filter (\t -> t.id /= id) model.entries }
                 ! []
-                
+
+        Check id isCompleted ->
+          let
+            update todo =
+              if todo.id == id then
+                {todo | completed = isCompleted }
+              else
+                todo
+          in
+            { model | entries = List.map update model.entries }
+                ! []
+
         UpdateEntry id task ->
             let
                 updateEntry t =
