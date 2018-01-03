@@ -2,6 +2,8 @@
 
 From [Elm todomvc](https://github.com/evancz/elm-todomvc), just a small handsone
 
+The slides are available [here](http://www.thibautgery.com/public/Elm-presentation.pdf)
+
 ## Requirements
 
  * [NodeJS](https://nodejs.org/en/download/)
